@@ -1,0 +1,48 @@
+import React from 'react';
+import './App.css';
+import { Context } from './components/contaxt/Context';
+import Comp1copy from './components/Props Driilng/Comp1copy';
+
+
+
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state=
+{
+  
+    name:"Rohit",
+    Roll:"001",
+  
+     
+    
+}
+    
+  }
+
+  render()
+  {
+    return(
+      <React.Fragment>
+        {/* <div className="container">
+          <div className="row">
+            <div className="col">
+              <ParentCal/>
+            </div>
+            <div className="col">
+              <ChildCal/>
+            </div>
+          </div>
+        </div> */}
+        <Context.Provider value={this.state.name}>
+        <Comp1copy />
+        </Context.Provider>        
+      </React.Fragment>
+  
+         )
+     }
+}
+
+export default App;
